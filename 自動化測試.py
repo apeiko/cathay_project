@@ -49,8 +49,8 @@ class CathayBankAutomation(object):
             WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located((By.XPATH, '//div[@data-ga-menu-lv1][text()="產品介紹"]'))).click()
             WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located((By.XPATH, cardIntro_xpath))).click()
         stopcardList = WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located((By.XPATH, '//section[@data-anchor-block="blockname06"]/div/div[@class="cubre-o-block__component"]/div/div[@class="swiper-wrapper"]')))
-        stopped_cards = stopcardList.find_elements(By.XPATH, '*')
-        print("(停發)信用卡數量：", len(stopped_cards))
+        stoppedCards = stopcardList.find_elements(By.XPATH, '*')
+        print("(停發)信用卡數量：", len(stoppedCards))
 
 
 if __name__ == "__main__":
