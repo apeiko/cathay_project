@@ -35,7 +35,7 @@ class CathayBankAutomation(object):
         try:
             WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located((By.XPATH, '//div[@class="cubre-o-menuLinkList__btn"]/div[@data-menul2-btn][text()="信用卡"]')))
         except TimeoutException:
-            print("Fail xxxxx")
+            print("Fail to find credit card menu")
         cardList_xpath = '//div[@class="cubre-o-menuLinkList__btn"]/div[@data-menul2-btn][text()="信用卡"]/../following-sibling::div'
         cardList = WebDriverWait(self.driver, 20).until(EC.visibility_of_element_located((By.XPATH, cardList_xpath)))
         cardItems = cardList.find_elements(By.XPATH,'a')
